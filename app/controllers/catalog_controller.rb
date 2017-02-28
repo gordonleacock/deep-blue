@@ -68,6 +68,8 @@ class CatalogController < ApplicationController
     config.add_index_field solr_name("contributor", :stored_searchable), label: "Contributor", itemprop: 'contributor', link_to_search: solr_name("contributor", :facetable)
     config.add_index_field solr_name("proxy_depositor", :symbol), label: "Depositor", helper_method: :link_to_profile
     config.add_index_field solr_name("depositor"), label: "Owner", helper_method: :link_to_profile
+    config.add_index_field solr_name("depositor_email", :stored_sortable, type: :date), label: "Depositor Email", itemprop: 'depositorEmail'
+    config.add_index_field solr_name("identifier_orcid", :stored_sortable, type: :date), label: "Identifier ORCID", itemprop: 'identifier_orcid'    
     config.add_index_field solr_name("publisher", :stored_searchable), label: "Publisher", itemprop: 'publisher', link_to_search: solr_name("publisher", :facetable)
     config.add_index_field solr_name("based_near", :stored_searchable), label: "Location", itemprop: 'contentLocation', link_to_search: solr_name("based_near", :facetable)
     config.add_index_field solr_name("language", :stored_searchable), label: "Language", itemprop: 'inLanguage', link_to_search: solr_name("language", :facetable)
@@ -89,6 +91,9 @@ class CatalogController < ApplicationController
     config.add_show_field solr_name("subject", :stored_searchable), label: "Subject"
     config.add_show_field solr_name("creator", :stored_searchable), label: "Creator"
     config.add_show_field solr_name("contributor", :stored_searchable), label: "Contributor"
+    config.add_show_field solr_name("depositor_email", :stored_searchable), label: "Depositor Email"
+    config.add_show_field solr_name("identifier_orcid", :stored_searchable), label: "Identifier ORCID"
+    config.add_show_field solr_name("description_provenance", :stored_searchable), label: "Provenance"
     config.add_show_field solr_name("publisher", :stored_searchable), label: "Publisher"
     config.add_show_field solr_name("based_near", :stored_searchable), label: "Location"
     config.add_show_field solr_name("language", :stored_searchable), label: "Language"
