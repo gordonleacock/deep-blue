@@ -6,6 +6,8 @@ development:
     - blancoj@umich.edu
     - gordonl@umich.edu
     - hellpop@umich.edu
+    - gml@umich.edu
+
 test:
   archivist:
     - archivist1@example.com
