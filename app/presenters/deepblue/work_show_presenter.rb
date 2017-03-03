@@ -1,7 +1,7 @@
 module Deepblue
   class WorkShowPresenter
-    include ModelProxy
-    include PresentsAttributes
+    include Hyrax::ModelProxy
+    include Hyrax::PresentsAttributes
     attr_accessor :solr_document, :current_ability, :request
 
     # delegate fields from Hyrax::Works::Metadata to solr_document
