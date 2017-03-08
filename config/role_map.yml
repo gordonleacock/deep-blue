@@ -24,4 +24,11 @@ test:
     - leland_himself@example.com
 
 production:
+  archivist:
+    - archivist1@example.com
+  admin:
+    - njaffer@umich.edu
+    - blancoj@umich.edu
+    - gordonl@umich.edu
+    - hellpop@umich.edu
   # Add roles for users here.
