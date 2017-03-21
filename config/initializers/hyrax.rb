@@ -1,6 +1,8 @@
 Hyrax.config do |config|
   # Injected via `rails g hyrax:work Work`
   config.register_curation_concern :work
+  # Injected via `rails g hyrax:work Dissertation`
+  config.register_curation_concern :dissertation
   # Email recipient of messages sent via the contact form
   # config.contact_email = "repo-admin@example.org"
 
