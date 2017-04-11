@@ -104,6 +104,11 @@ class CatalogController < ApplicationController
     config.add_show_field solr_name("resource_type", :stored_searchable), label: "Resource Type"
     config.add_show_field solr_name("format", :stored_searchable), label: "File Format"
     config.add_show_field solr_name("identifier", :stored_searchable), label: "Identifier"
+    config.add_show_field solr_name("thesis_degree_name", :stored_searchable), label: "Dissertation Title"
+    config.add_show_field solr_name("thesis_degree_discipline", :stored_searchable), label: "Dissertation Subject"
+    config.add_show_field solr_name("thesis_degree_grantor", :stored_searchable), label: "Dissertation Granting Institution"
+    config.add_show_field solr_name("contributor_advisor", :stored_searchable), label: "Dissertation Faculty Advisor"
+    config.add_show_field solr_name("contributor_committee_member", :stored_searchable), label: "Dissertation Committee Member"
 
     # "fielded" search configuration. Used by pulldown among other places.
     # For supported keys in hash, see rdoc for Blacklight::SearchFields

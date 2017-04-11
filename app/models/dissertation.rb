@@ -1,8 +1,11 @@
+# models/disseration.rb
 # Generated via
 #  `rails generate hyrax:work Dissertation`
 class Dissertation < ActiveFedora::Base
   include ::Hyrax::WorkBehavior
   include ::Hyrax::BasicMetadata
+  include ::Deepblue::BasicMetadata
+  include ::Deepblue::DissertationMetadata
   # Change this to restrict which works can be added as a child.
   # self.valid_child_concerns = []
   validates :title, presence: { message: 'Your work must have a title.' }
